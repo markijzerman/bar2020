@@ -1,0 +1,107 @@
+#N canvas 173 183 1920 997 12;
+#X declare -stdlib /cyclone;
+#X obj 35 141 oscparse;
+#X obj 35 73 loadbang;
+#X obj 35 118 netreceive -u -b;
+#X msg 35 94 listen 9999;
+#X obj 35 165 list trim;
+#X obj 31 247 cyclone/zl sort -1;
+#X obj 35 48 declare -stdlib /cyclone;
+#X obj 35 193 route Data Change;
+#X obj 340 46 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 340 67 \; pd dsp \$1;
+#X obj 243 354 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 238 229 iter;
+#X obj 236 251 scale 0 1000 0 1;
+#X obj 235 280 zl group 26;
+#X obj 263 354 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 284 354 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 304 354 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 324 353 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 344 353 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 365 353 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 385 353 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 406 353 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 426 353 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 447 353 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 467 353 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 487 352 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 507 352 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 528 352 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 548 352 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 569 351 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 589 351 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 609 350 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 629 350 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 650 350 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 670 350 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 691 350 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 712 350 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 732 350 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 271 310 unpack f f f f f f f f f f f f f f f f f f f f f f f
+f f f;
+#X obj 753 351 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X connect 0 0 4 0;
+#X connect 1 0 3 0;
+#X connect 2 0 0 0;
+#X connect 3 0 2 0;
+#X connect 4 0 7 0;
+#X connect 7 0 5 0;
+#X connect 7 0 11 0;
+#X connect 8 0 9 0;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X connect 13 0 38 0;
+#X connect 38 0 10 0;
+#X connect 38 1 14 0;
+#X connect 38 2 15 0;
+#X connect 38 3 16 0;
+#X connect 38 4 17 0;
+#X connect 38 5 18 0;
+#X connect 38 6 19 0;
+#X connect 38 7 20 0;
+#X connect 38 8 21 0;
+#X connect 38 9 22 0;
+#X connect 38 10 23 0;
+#X connect 38 11 24 0;
+#X connect 38 12 25 0;
+#X connect 38 13 26 0;
+#X connect 38 14 27 0;
+#X connect 38 15 28 0;
+#X connect 38 16 29 0;
+#X connect 38 17 30 0;
+#X connect 38 18 31 0;
+#X connect 38 19 32 0;
+#X connect 38 20 33 0;
+#X connect 38 21 34 0;
+#X connect 38 22 35 0;
+#X connect 38 23 36 0;
+#X connect 38 24 37 0;
+#X connect 38 25 39 0;

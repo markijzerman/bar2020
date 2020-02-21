@@ -33,9 +33,9 @@ int index;
 
 EthernetUDP Udp;
 
-IPAddress ip(169, 254, 219, 6); //the Arduino's IP first 3 numbers have to match destination IP
+IPAddress ip(192, 168, 1, 101); //the Arduino's IP first 3 numbers have to match destination IP
 
-IPAddress outIp(169, 254, 219, 55); //destination IP
+IPAddress outIp(192, 168, 1, 85); //destination IP
 
 //
 //IPAddress ip(169, 254, 14, 6); //the Arduino's IP first 3 numbers have to match destination IP
