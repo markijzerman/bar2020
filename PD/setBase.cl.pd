@@ -1,0 +1,43 @@
+#N canvas 962 72 450 300 12;
+#X obj 18 136 f;
+#X obj 18 162 == 0;
+#X obj 36 97 inlet;
+#X text 80 95 Change \$1 in;
+#X text 228 131 Data \$1 in;
+#X floatatom 167 279 5 0 0 0 - - -;
+#X obj 184 131 inlet;
+#X obj 235 186 sel 1;
+#X obj 235 162 == 2;
+#X obj 167 303 outlet;
+#X msg 235 211 0;
+#X obj 18 70 r metro;
+#X floatatom 184 209 5 0 0 0 - - -;
+#X obj 18 187 sel 1;
+#X obj 167 252 f;
+#X obj 18 224 counter 0 100;
+#X obj 76 247 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 12 12 when no change in movement is detected for x seconds**
+\, read last incoming value and send this to scaling as min. value
+of this input \, until negative change is detected.;
+#X text 18 332 ** default scan length == 20 ms. * 100 (metro speed
+* counter max);
+#X obj 281 184 loadbang;
+#X connect 0 0 1 0;
+#X connect 1 0 13 0;
+#X connect 2 0 0 1;
+#X connect 2 0 8 0;
+#X connect 5 0 9 0;
+#X connect 6 0 12 0;
+#X connect 7 0 10 0;
+#X connect 8 0 7 0;
+#X connect 10 0 14 1;
+#X connect 10 0 14 0;
+#X connect 11 0 0 0;
+#X connect 12 0 14 1;
+#X connect 13 0 15 0;
+#X connect 13 1 15 2;
+#X connect 14 0 5 0;
+#X connect 15 2 16 0;
+#X connect 16 0 14 0;
+#X connect 19 0 10 0;
